@@ -1,0 +1,29 @@
+.jumbotron {
+    background-image: url(group.jpg);
+    text-align: center;
+    background-image: fixed;
+}
+
+#values {
+	padding: 40px 40px 40px 40px;
+	text-align: justify;
+}
+
+#aboutus {
+	padding: 40px 40px 40px 40px;
+	text-align: justify;
+	background-color: rgb(230, 230, 230);
+}
+
+#services {
+	padding: 40px 40px 40px 40px;
+}
+
+#whatpplsay {
+	padding: 40px 40px 40px 40px;
+	background-color: rgb(230, 230, 230);
+}
+
+#contactus {
+	padding: 40px 40px 40px 40px;
+}
