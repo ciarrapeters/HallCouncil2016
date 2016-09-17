@@ -1,7 +1,12 @@
+
 .jumbotron {
-    background-image: url(group.jpg);
+    background: url(groupwindowedit.jpg) center center;
     text-align: center;
     background-image: fixed;
+    opacity: .8;
+    height: 600px;
+    background-repeat: no-repeat;
+	background-size: cover;
 }
 
 #values {
