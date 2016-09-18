@@ -8,37 +8,67 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <link rel="stylesheet" type="text/css" href="style.css">
-  <style>
-    /* Remove the navbar's default margin-bottom and rounded borders */
-    .navbar {
-      margin-bottom: 0;
-      border-radius: 0;
-    }
-    
-    /* Add a gray background color and some padding to the footer */
-    footer {
-      background-color: #f2f2f2;
-      padding: 25px;
-    }
-  </style>
+
+
+<!add animation effect to the pictures!>
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+  
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+</script>
+
+
 </head>
 <body>
 
 <div class="jumbotron">
   <div class="container text-center">
-    <h1>Your Hall Council 2016</h1>
-    <p>Some catchy phrase to get votes</p>
+    <div class="bg">
+      <h1 style="color: white;">Your Hall Council 2016</h1>
+      <p style="color: white;">Some catchy phrase to get votes</p>
+    </div>
   </div>
 </div>
 
 <div id="values" class="container-fluid">
   <div class="row">
     <div class="col-sm-4">
-      <span class="glyphicon glyphicon-globe logo slideanim"></span>
+      <img class="slideanim" src="ByThePeople.png"><br>
     </div>
     <div class="col-sm-8">
       <h2>Our Values</h2><br>
-      <p style="font-size: 20px;"><strong>MISSION:</strong> Our mission is to bring Frank's burgers to all residents of West F and C. Our mission is to bring Frank's burgers to all residents of West F and C. Our mission is to bring Frank's burgers to all residents of West F and C. Our mission is to bring Frank's burgers to all residents of West F and C. Our mission is to bring Frank's burgers to all residents of West F and C.</p><br>
+      <p style="font-size: 20px;"><strong>MISSION:</strong> To represent the people of West C and West F and provide fun and engaging events for everyone. We plan to represent our constituency with the utmost vigilance and accuracy, consistently reaching out to the people of "the neighborhood" to determine the general opinions on what needs improvement. </p><br>
       <p style="font-size: 20px;"><strong>VISION:</strong> Our vision for West C and F is to use the money to fund giant food sessions where we grill burgers and feed them to the plebians.
       Our vision for West C and F is to use the money to fund giant food sessions where we grill burgers and feed them to the plebians.</p><br>
     </div>
@@ -49,12 +79,37 @@
   <div class="row">
     <div class="col-sm-8">
       <h2 style="text-align:center;">About Us</h2><br>
-      <h4>We are smol and love puppers and doggos of all sizes. We are smol and love puppers and doggos of all sizes. We are smol and love puppers and doggos of all sizes. We are smol and love puppers and doggos of all sizes.</h4><br>
-      <p>We will bring puppers to all residents of WVC+F. We own 3 doggos and house them in our room: 318. We will bring puppers to all residents of WVC+F. We own 3 doggos and house them in our room: 318. We will bring puppers to all residents of WVC+F. We own 3 doggos and house them in our room: 318.</p>
+      <p>We will bring puppers to all residents of WVC+F. We own 3 doggos and house them in our room: 318. Frank also makes great meat balls. We play loud music, host parties occasionally, and will have you over if you can just figure out the secret knock.</p>
     </div>
     <div class="col-sm-4">
       <span class="glyphicon glyphicon-signal logo"></span>
-      <p>photos of us</p>
+      <p>omg guys get your act together. you better win this election. also please edit out all the silly things i put in. PUT SOME SORT OF SWEET LOGO HERE WOOOO GO TEAM</p>
+    </div>
+  </div>
+
+  <br><br><br><br>
+  <h2 style="text-align:center;">Bios</h2>
+
+  <div class="row">
+    <div class="col-sm-6">
+      <img class="img-circle slideanim" id="photos" src="Judesideedit.jpg"><br>
+      <h3>Jude: </h3><p>At Northeastern I study Political Science. You can tell me apart from the rest of the world because I always wear a gold chain around my neck, except when balling up. I sometimes put too much gel in my hair.</p>
+
+    </div>
+    <div class="col-sm-6">
+      <img class="img-circle slideanim" id="photos" src="Manassideedit.jpg"><br>
+      <h3>Manas: </h3><p>Manas: I'm Computer Science and Business major. When I'm not in class, I'm at the gym getting jacked or teaching young ones how to program. I may be smol, but I have a big heart.</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-6">
+      <img class="img-circle slideanim" id="photos" src="Kennethsideedit.jpg"><br>
+      <h3>Kenneth: </h3><p>I am a second year student studying International Business with a minor in International Affairs. Apart from eating and sleeping, I sometimes play around with Excel for financial analysis.</p>
+    </div>
+    <div class="col-sm-6">
+      <img class="img-circle slideanim" id="photos" src="Franksideedit.jpg"><br>
+      <h3>Frank: </h3><p>I am a second year Computer Engineering and Computer Science student from New York City. I love to cook, eat, sleep. I make the best burgers, and I'll make them for <i>you</i> when I become Secretary.</p>
     </div>
   </div>
 </div>

@@ -2,12 +2,77 @@
 .jumbotron {
     background: url(groupwindowedit.jpg) center center;
     text-align: center;
-    background-image: fixed;
     opacity: .8;
-    height: 600px;
+    height: 700px;
+	background-attachment: fixed;
+    background-position: center;
     background-repeat: no-repeat;
-	background-size: cover;
+    background-size: cover;
 }
+
+.bg {
+	background-color: black;
+	opacity: .8;
+	padding: 10px;
+}
+
+#photos {
+	margin-left: 25%;
+	width:50%;
+}
+
+.slideanim {visibility:hidden;}
+.slide {
+    /* The name of the animation */
+    animation-name: slide;
+    -webkit-animation-name: slide; 
+    /* The duration of the animation */
+    animation-duration: 1s; 
+    -webkit-animation-duration: 1s;
+    /* Make the element visible */
+    visibility: visible; 
+}
+
+/* Go from 0% to 100% opacity (see-through) and specify the percentage from when to slide in the element along the Y-axis */
+@keyframes slide {
+    0% {
+        opacity: 0;
+        transform: translateY(70%);
+    } 
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    } 
+}
+@-webkit-keyframes slide {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(70%);
+    } 
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0%);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .btn-lg {
+        width: 100%;
+        margin-bottom: 35px;
+    }
+}
+@media screen and (max-width: 480px) {
+    .logo {
+        font-size: 150px;
+    }
+}
+
+
+
 
 #values {
 	padding: 40px 40px 40px 40px;
