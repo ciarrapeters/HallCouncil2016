@@ -21,6 +21,10 @@
 	width:50%;
 }
 
+#phoneScale {
+	width: 100%;
+}
+
 .slideanim {visibility:hidden;}
 .slide {
     /* The name of the animation */
@@ -76,6 +80,10 @@
 @media screen and (max-width: 480px) {
     .logo {
         font-size: 150px;
+    }
+
+    .jumbotron {
+    	height: 500px;
     }
 }
 
