@@ -16,9 +16,17 @@
 	padding: 10px;
 }
 
+p {
+    font-size: 20px;
+}
+
 #photos {
-	margin-left: 25%;
 	width:50%;
+}
+
+#miniPhotos {
+    padding: 20px 20px 20px 20px;
+    width:100%;
 }
 
 #phoneScale {
@@ -88,8 +96,6 @@
 }
 
 
-
-
 #values {
 	padding: 40px 40px 40px 40px;
 	text-align: justify;
@@ -101,13 +107,13 @@
 	background-color: rgb(230, 230, 230);
 }
 
-#services {
-	padding: 40px 40px 40px 40px;
+#bios {
+    background-color: lightgray;
 }
 
-#whatpplsay {
+#services {
 	padding: 40px 40px 40px 40px;
-	background-color: rgb(230, 230, 230);
+    background-color: rgb(230, 230, 230);
 }
 
 #contactus {
